@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Poll</title>
+        <meta charset="utf-8" />
+        <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+        <script src="assets/js/jquery1.11.1.js"></script>
+    </head>
+    <body>
+                    <div id="outer-poll">
+                <div id="poll">
+                    <p class="pollques">هل كنت تتوقع الحكم ببراءة مبارك من أول جلسة في اعادة المحاكمة؟</p>
+                    <div id="pollcontainer">
+                    </div>
+                    <div id="formcontainer">
+                                                    <form action="poll.html" method="post" id="pollform">
+                                                                                                            <p class="p_poll">
+                                            <input type="radio" name="option_id" value="30" id="option-'30'" required />
+                                            <label for="option-'30'">نعم</label>
+                                        </p>
+                                                                            <p class="p_poll">
+                                            <input type="radio" name="option_id" value="31" id="option-'31'" required />
+                                            <label for="option-'31'">لا</label>
+                                        </p>
+                                                                            <p class="p_poll">
+                                            <input type="radio" name="option_id" value="32" id="option-'32'" required />
+                                            <label for="option-'32'">لم اهتم</label>
+                                        </p>
+                                                                                                    <input type="submit" class="poll-btn" name="vote" value="تصويت" />
+                            </form>
+                                            </div>
+                </div>
+            </div>
+            <script>
+                jQuery(document).ready(function () {
+                    jQuery('.option').each(function () {
+                        jQuery(this).find('.bar').animate({
+                            width: jQuery(this).attr('data-percent')
+                        }, 1000);
+                    });
+                });
+            </script>
+            </body>
+</html>
